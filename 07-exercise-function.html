@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Excercise</title>
+</head>
+<body>
+  
+  <script>
+    /* (Ex. 7a,b,c)
+    function greet(name) {
+        if (!name) {
+          console.log('Hi there!');
+        } else {
+          console.log(`Hello ${name}`);
+        }
+      }
+
+      greet('Urchman');
+      */
+
+     /* (Ex. 7d) // Function that converts Celcius to Fahrenheit
+     function convertToFahrenheit(Celcius) {
+      Fahrenheit = (Celcius * 9/5) + 32;
+      console.log(Fahrenheit);
+     }
+
+     convertToFahrenheit(25);
+     */
+    
+     /* (Ex. 7e) // Function that converts Fahrenheit to Celcius
+     function fahrenheitToCelcius(Fahreheit) {
+      Celcius = (Fahreheit - 32) * 5/9;
+      console.log(Celcius);
+     }
+
+     fahrenheitToCelcius(86);
+     */
+
+      // Create a function 'convertTemperature(degrees, unit) that takes a number and a unit ("C" or "F"), and converts it into the other unit'  
+
+      function convertToFahrenheit(celcius) {
+        return (celcius * 9/5) + 32;
+      }
+
+      function convertToCelcius(fahrenheit) {
+        return (fahrenheit - 32) * 5/9;  
+      }
+
+     function convertTemperature(degrees, unit) {
+      if (unit === 'C') {
+        const result = convertToFahrenheit(degrees);
+        return `${result} F`;
+      } else if (unit === 'F') {
+        const result = convertToCelcius(degrees);
+        return `${result} C`;
+      }
+     }
+
+     console.log(convertTemperature(25, 'C'));
+     console.log(convertTemperature(86, 'F'))
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
