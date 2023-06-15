@@ -9,6 +9,7 @@
 <body>
   
   <script>
+    /*
     const product = {
       name: 'socks',
       price: 1090
@@ -24,12 +25,44 @@
     // deleting property from an object
     delete product.newProperty;
     console.log(product);
+    */
+    
     /*
     Why use objects
     - They make our code more organised
     - let us group multiple values together
     - let us use multiple values together
     */
+    
+    const product2 = {
+      name: 'shirt',
+      'delivery-time': '1-day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1() {
+        console.log('Function inside object');
+      }
+    }
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+    console.log(product2.rating.count);
+    product2.fun();
+
+    // Built-in JSON object
+    // this helps us to convert JavaScript object to JSON:
+    // JSON.stringify & JSON.parse
+    // localstorage: This stores value permanently unlike variable which stores temporarily. It only supports strings
+
+    const jsonString = JSON.stringify(product2);
+    const jsonParse = JSON.parse(jsonString);
+    console.log(jsonString);
+    console.log(jsonParse);
+     
+
   </script>
 </body>
 </html>
