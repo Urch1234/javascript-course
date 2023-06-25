@@ -34,6 +34,7 @@
     - let us use multiple values together
     */
     
+    /*
     const product2 = {
       name: 'shirt',
       'delivery-time': '1-day',
@@ -61,8 +62,49 @@
     const jsonParse = JSON.parse(jsonString);
     console.log(jsonString);
     console.log(jsonParse);
-     
+     */
 
+     console.log('hello'.toUpperCase());
+     console.log('hello'.length);
+
+     // Object are referencing
+
+     const object1 = {
+      message: 'hello'
+     };
+     // copy by reference
+     const object2 = object1;
+
+     object1.message = 'Good Job!';
+     console.log(object1);
+     console.log(object2);
+
+     // Objects can't be compared directly
+
+     const object3 = {
+      message: 'Good Job!'
+     };
+     // object3 !== object1
+     console.log(object3 === object1);
+     // but object2 === object1 because they are pointing to the same reference
+     console.log(object2 === object1);
+
+
+     // object short-cut
+     const object4 = {
+      message: 'Good Job!',
+      price: 799
+     };
+     //const message = object4.message;
+     const {message, price} = object4; // this is called destructuring
+     console.log(message);
+     console.log(price);
+
+     const object5 = {
+      message: message
+     };
+
+     console.log(object5);
   </script>
 </body>
 </html>
