@@ -13,7 +13,14 @@ Alogorithm on (Rock, Paper Scissors)
 - update a score.
 - Display the result and score in popup.
 
-E-commerce web system
+E-commerce web system (Amazon Shopping)
+
+- When we click the button by the textbox
+
+1. Get the text in the text box
+2. if amount < $40, add $10
+3. otherwise, just the the actual amount
+4. Display the total on the page.
 
 Creating the Subscribe button
 Steps:
