@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excercise 10 classList</title>
+  <style>
+    .is-test {
+      background-color: grey;
+      color: greenyellow;
+      padding: 5px;
+      border: none;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  
+  <button onclick="
+    test(); 
+  "
+  class="js-button"
+  >Test</button>
+
+  <script>
+    function test () {
+      const button = document.querySelector('.js-button');
+      console.log(button.classList.contains('js-button'));
+    }
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn ON/OFF buttons</title>
+  <style>
+    .toggle-button {
+      background-color: rgb(230, 230, 230);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .is-toggled {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="
+    Gaming();
+  " class="toggle-button js-gaming">Gaming</button>
+  
+
+  <script>
+    function Gaming() {
+      const button = document.querySelector('.js-gaming');
+      if (button.classList.contains('is-toggled') == false) {
+        button.classList.add('is-toggled');
+      } else {
+        button.classList.remove('is-toggled');
+      }
+    }
+  </script>
+</body>
+</html>
