@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array and loop Excercise</title>
+</head>
+<body>
+  
+  <script>
+/* 11a
+  const nums = [10, 20, 30];
+
+  nums[2] = 99;
+  console.log(nums);
+    */
+
+
+/* 11b.
+  function getLastValue() {
+    const exampleArray = [1, 20, 22, 24, 5];
+
+    lastValue = exampleArray[4];
+    
+    return lastValue
+  }
+  
+  console.log(getLastValue());
+  */
+
+ /* 11c. 
+  * Three approaches to swapping elements of an array
+  * 1. Using temporary variable
+  * 2. destructuring
+  * 3. splice() array method.
+  */
+
+/*
+  // Temporary variable method
+  let number = [1, 20, 22, 24, 5];
+
+  const temp = number[0];
+  number[0] = number[1];
+  number[1] = temp;
+
+  console.log(number);
+
+// Crrating reuseable function
+const arraySwap = (array, index1, index2) => {
+  let temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+};
+
+let myArray = [1, 20, 22, 24, 5];
+arraySwap(myArray, 0, 4);
+console.log(myArray);
+*/
+
+// Destructuring Method
+// You can create a new array containing both elements
+// in a particular order, then assign it to a new array
+// that contains both elements in the reversed order.
+/*
+let myArray = [1, 20, 22, 24, 5];
+[myArray[0], myArray[4]] = [myArray[4], myArray[0]];
+console.log(myArray);
+*/
+
+// reusable fxt for destructuring method
+/*
+const arraySwap = (array, index1, index2) => {
+  [myArray[0], myArray[4]] = [myArray[4], myArray[0]];
+};
+
+let myArray = [1, 20, 22, 24, 5];
+
+arraySwap(myArray, 0, 4);
+console.log(myArray);
+*/
+
+// Splise() method
+// We can use the splice() array method to remove one 
+// or more element(s) from an array and replace the element(s)
+// with any specified element.
+
+/*
+ * syntax
+ * array.splice(index, howmany, element1, ..., elementx)
+ */
+// example 1. To remove a particular element.
+
+/*
+  let myArray = [1, 20, 22, 24, 5];
+
+  myArray.splice(1, 1);
+  console.log(myArray); // result [1, 22, 24, 5]
+  */
+
+// 2. To replace the removed element with another
+
+/*
+  let myArray = [1, 20, 22, 24, 5];
+
+  myArray.slice(1, 1, 32);
+  console.log(myArray); // result [1, 32, 22, 24, 5]
+  */
+
+// 3. To swap two elements, we have
+  /*
+  let myArray = [1, 20, 22, 24, 5];
+
+  // myArray[4] = myArray.splice(0, 1, myArray[4])[0]; or
+  myArray[0] = myArray.splice(4, 1, myArray[0])[0]
+  console.log(myArray);
+
+  // reuseable function
+  const arraySwap = (array, index1, index2) => {
+    myArray[index1] = myArray.splice(index2, 1, myArray[index1])[0];
+  };
+
+  arraySwap(myArray, 4, 4);
+  console.log(myArray);
+  */
+
+  function arraySwap(array) {
+    const lastIndex = array.length - 1;
+
+    // we need to save the values first before
+    // swapping. Otherwise, if we swap directly,
+    // we would lose one of the values.
+
+    const lastValue = array[lastIndex];
+    const firstValue = array[0];
+
+    array[0] = lastValue;
+    array[lastIndex] = firstValue;
+
+    return array;
+  }
+
+  console.log(arraySwap([1, 20, 22, 24, 5]));
+  console.log(arraySwap(['hi', 'hello', 'hey']));
+  </script>
+</body>
+</html>

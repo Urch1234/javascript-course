@@ -27,3 +27,10 @@ Steps:
 
 - if the text is "Subscribe" change it to "Subsribed".
 - otherwise, change back to "Subscribe"
+
+- Todo List Task
+  1. Create array to store todos
+  2. When we click "add",
+  3. Get text from the textbox,
+  4. Add it to array,
+  5. Finally console.log the array.
