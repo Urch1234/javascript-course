@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return max and min using loop</title>
+</head>
+<body>
+  
+  <script>
+    // Return max and min value from array using loop
+    // instead of math.max or math.min
+
+   const arrayList = [1, -3, 5];
+
+   const arr = {
+      min: arrayList[0],
+      max: arrayList[0]
+    };
+    
+    for (let i = 0; i < arrayList.length; i++) {
+     const value = arrayList[i];
+      if (value < arr.min) {
+        arr.min = value;
+      }
+      
+      if (value > arr.max) {
+       arr.max = value;
+      }
+    };
+
+    console.log(arr);
+
+    // Reuseable function
+    function minMax(arrayList) {
+      const arr = {
+        min: arrayList[0],
+        max: arrayList[0]
+      };
+
+      for (let i = 0; i < arrayList.length; i++) {
+        const value = arrayList[i];
+
+        // If the value is less than the min,
+        // update the min
+        if (value < arr.min) {
+          arr.min = value;
+        }
+
+        // If the value is greater than max, update max
+
+        if (value > arr.max) {
+          arr.max = value;
+        }
+      }
+
+      return arr;
+    }
+
+    console.log(minMax(arrayList));
+  </script>
+</body>
+</html>

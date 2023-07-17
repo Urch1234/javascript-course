@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function that takes array and return object</title>
+</head>
+<body>
+  
+  <script>
+    function countWords(word) {
+        // Create a new object to store the results.
+        const result = {};
+
+        // Iterate over the original array and count the number of times each string appears.
+        for (let i = 0; i < word.length; i++) {
+          const stringLetters = word[i];
+          // result[stringLetters] adds/accesses a property using whatever is
+          // saves inside the 'stringLetters' variable.
+          // if stringLetters = 'apple', result[stringLetters] will do result['apple']
+          // if word = 'grape', result[stringletters] will do result['grape'].
+          /*
+          if (result[stringLetters]) {
+            result[stringLetters]++;
+          } else {
+            result[stringLetters] = 1;
+          }
+        }
+        */
+        
+        //or
+        // result[stringLetters] adds/accesses a property using whatever is
+          // saves inside the 'stringLetters' variable.
+          // if stringLetters = 'apple', result[stringLetters] will do result['apple']
+          // if word = 'grape', result[stringletters] will do result['grape'].
+        if (!result[stringLetters]) {
+          result[stringLetters] = 1;
+        } else {
+          result[stringLetters]++;
+        }
+      }
+        // Return the new object.
+        return result;
+      }
+    
+    const word = ["apple", "grape", "apple", "apple"];
+
+      const counts = countWords(word);
+
+      console.log(counts); // { "hello": 3, "world": 2 }
+
+  </script>
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increment each element of an array</title>
+</head>
+<body>
+  
+  <script>
+
+    /*
+     // Increment each element of the array
+     let arr = [1, 2, 3];
+      
+     const newArr = arr.map(num => num + 1);
+     console.log(newArr);
+     */
+
+      // Increment each element of the array
+      const arr = [1, 2, 3];
+      const result = [];
+
+      for (let i = 0; i < arr.length; i++) {
+        result.push(arr[i] + 1);
+      }
+
+      console.log(result);
+
+  // Reuseable function for incrementing each element
+  function addOne(array) {
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+      result.push(array[i] + 1);
+    }
+
+    return result;
+  }
+
+  console.log(addOne(arr));
+  console.log(addOne([-2, -1, 0, 99]));
+
+  </script>
+</body>
+</html>
