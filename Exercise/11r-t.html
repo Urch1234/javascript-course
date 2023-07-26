@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove element with continue</title>
+</head>
+<body>
+  <script>
+    // Ex.11r
+
+    /*
+    function removeEgg(foods) {
+      const result = [];
+
+      for (let i = 0; i < foods.length; i++) {
+      // If the string is 'egg', use continue to skip it.
+        if (foods[i] === 'egg') {
+          continue;
+        }
+
+        //We don't need to have an else here because
+        // the only way to reach this code is if the 
+        // if-statement is false.
+        result.push(foods[i])
+      }
+
+     return result;
+    }
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']))
+    */
+
+    // Ex.11s
+    /*
+    function removeEgg(foods) {
+      const result = [];
+      let eggsRemoved = 0;
+
+      
+      for (let i = 0; i < foods.length; i++) {
+        // Only skip 'egg' if we removed less than 2
+        // of them so far
+
+        if (foods[i] === 'egg' && eggsRemoved < 2) {
+          // Update the number of 'egg' we have removed.
+          // This must be done before continue, otherwise,
+          // doing continue first will just skip this code.
+
+          eggsRemoved++;
+          continue;
+        }
+        result.push(foods[i]);
+      }
+      return result;
+    }
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    */
+
+    function removeEgg(foods) {
+      let reversedFood = foods.reverse();
+      const result = [];
+      let eggsRemoved = 0;
+        
+
+    for (let i = 0; i < reversedFood.length; i++) {
+        // Only skip 'egg' if we removed less than 2
+        // of them so far
+
+        if (foods[i] === 'egg' && eggsRemoved < 2) {
+          // Update the number of 'egg' we have removed.
+          // This must be done before continue, otherwise,
+          // doing continue first will just skip this code.
+
+          eggsRemoved++;
+          continue;
+        }
+        result.push(reversedFood[i]);
+      }
+      return result.reverse();
+    }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+  </script>
+</body>
+</html>

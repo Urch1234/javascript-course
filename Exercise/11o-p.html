@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check array and return index num </title>
+</head>
+<body>
+  <script>
+    // Exercise 11o.
+
+    /*
+    let words = ['hello', 'world', 'search', 'good'];
+
+    // Set the index to -1 at the start (so we'll assume
+    // the string 'search' doesn't exist in the array).
+    // Id we find the string "search" in the arry, we 
+    // will update the index.
+
+    let index = -1;
+
+    for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+    }
+  }
+
+  console.log(index);
+
+  words = ['not', 'found'];
+  index = -1;
+
+  for (let i = 0; i < words.length; i++) {
+  if (index === 'search') {
+    index = i;
+  }
+  }
+
+  console.log(index);
+
+  */
+
+  // Exercise 11p.
+  // Modify the above code to output the first index of 
+  // a word the appeared multiple times in a string 
+
+  let words = ['hello', 'world', 'search', 'good', 'search'];
+  
+  let index = -1;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+      // Once we find 'search', immediately exit
+      // the loop since we want he index of the 
+      // first appearance of 'search'
+    
+      break;
+    }
+  }
+
+  console.log(index);
+
+  words = ['not', 'found'];
+  index = -1;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'string') {
+      index = i;
+    }
+
+    break;
+  }
+
+  console.log(index);
+  </script>
+</body>
+</html>

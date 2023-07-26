@@ -99,7 +99,66 @@
       */
 
       // Arrays are references
-      
+      const array1 = [1, 2, 3];
+     // const array2 = array1;
+      //array2.push(4);
+      console.log(array1); //result = [1, 2, 3, 4]
+     // console.log(array2); //result = [1, 2, 3, 4]
+      // Both were modified because arrays are references, both of them points to the same array in memory.
+      // To avoid this behaviour we can create a copy of the values in the array using a method called .slice().
+     const array2 = array1.slice();
+     array2.push(4);
+     console.log(array1); // result = [1, 2, 3]
+     console.log(array2); // result = [1, 2, 3, 4]
+
+     // Destructuring
+     const [firstValue, secondValue] = [1, 2, 3];
+     console.log(firstValue);
+     console.log(secondValue);
+
+
+     // loop that counts from 1 to 10
+     for (let i = 1; i <= 10; i++) {
+      if (i % 3 === 0) {
+        continue;
+      }
+      console.log(i);
+      if(i === 8) {
+        break;
+      }  
+     }
+
+     let i = 1;
+
+     while (i <= 10) {
+      if (i % 3 === 0) {
+        i++;
+        continue
+      }
+      console.log(i);
+      i++;
+     }
+
+     // create function of array in which each element is doubled
+
+     function doubleArray(nums) {
+     const numsDoubled = [];
+
+     for (let i = 0; i < nums.length; i++) {
+      const num = nums[i];
+      /*
+      // End program when it gets to 0 element in the array
+      if (num === 0) {
+        return numsDoubled; // simply insert break(same result)
+      } 
+      */
+      numsDoubled.push(num * 2);
+     }
+      return numsDoubled;
+    }
+
+    console.log(doubleArray([1, 1, 3]));
+    console.log(doubleArray([2, 2, 5]));
   </script>
 </body>
 </html>

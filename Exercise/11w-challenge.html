@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove duplicate strings</title>
+</head>
+<body>
+  <!-- Crete a function unique(array) that takes an array 
+       of strings and returns an array where each string
+       only appear once ( there are no duplicates) -->
+       
+  <script>
+    function findIndex(array, words) {
+      
+      for (let i = 0; i < array.length; i++) {
+
+        if (array[i] === words) {
+          return i;
+        } 
+      }
+      return -1;
+    }
+
+  function unique(array) {
+    const result = [];
+
+    for (let i = 0; i < array.length; i++) {
+      const word = array[i];
+
+      // Using the findIndex() function from above, we 
+      // can check if the string is already in the 
+      // result array. If it's not in the result array
+      // (i.e index -1), then add it to the result array.
+      if (findIndex(result, word) === -1) {
+        result.push(word);
+      }
+    }
+      return result;
+    }
+  
+
+  console.log(unique(['green', 'red', 'blue', 'red']));
+  console.log(unique(['red', 'green', 'green', 'red'])); 
+  </script>
+</body>
+</html>

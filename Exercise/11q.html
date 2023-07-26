@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function findIndex(array, words) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === words) {
+          /*
+            index = i;
+          */ 
+
+          // Instead of creating an accumulator variable
+          // "index = i" and updating it in the loop, we 
+          // can just return i directly, when we find it
+          // since this is a function
+          return i;
+        }
+      }
+      return -1;
+    }
+console.log(findIndex(['hello', 'late', 'strings', 'people', 'strings'], 'strings'))
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'))
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'))
+  </script>
+</body>
+</html>
